@@ -1,6 +1,19 @@
-import React from 'react';
-import './SearchForm.css';
+import React, { Component } from 'react'
+import './SearchForm.css'
 
-// SEARCHFORM COMPONENT CODE GOES HERE
+class SearchForm extends Component{
+  constructor() {
+    super()
+  }
 
-export default SearchForm;
+  render() {
+    return (
+      <header>
+        <h1 className="header--h1">What's <span className="header--span">New?</span></h1>
+        <input className="header--input" onfocus="this.value=''" placeholder="Search for news article here."></input>
+        <button className="header--button">Search Now</button>
+      </header>
+    )
+  }
+}
+export default SearchForm
