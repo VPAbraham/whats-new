@@ -9,8 +9,16 @@ nav {
 
 .nav-div {
   display: flex;
+  align-items: center;
+  margin: 50px 15px 0 30px;
+}
+
+.nav-div p {
+  font-size: 1.5em;
 }
 
 .icon {
-  width: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 15px;
 }
