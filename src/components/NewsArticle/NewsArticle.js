@@ -1,17 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './NewsArticle.css';
 
-class NewsArticle extends Component{
-  constructor() {
-    super()
-  }
-
-  render() {
-    return (
-      <h4>this is an article</h4>
-    )
-  }
+const NewsArticle = (props) => {
+  return (
+    <div>
+      <img/>
+      <h3>Article Title</h3>
+      <p>Article Desc</p>
+      <section>
+        <a>
+          <p>Link To article</p>
+        </a>
+      </section>
+    </div>
+  )
 }
-// NEWSARTICLE COMPONENT CODE GOES HERE
 
 export default NewsArticle;

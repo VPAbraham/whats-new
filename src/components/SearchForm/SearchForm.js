@@ -4,6 +4,15 @@ import './SearchForm.css'
 class SearchForm extends Component{
   constructor() {
     super()
+    this.state = {search: ""}
+  }
+
+  handleChange = (event) => {
+    this.setState({ search: event.target.value })
+  }
+
+  noReload(event) {
+    event.preventDefault()
   }
 
   render() {

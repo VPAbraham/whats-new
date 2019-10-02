@@ -10,9 +10,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      local
+      local,
+      // localNews,
+      // technology,
+      // entertainment,
+      // science,
+      // health
     }
   }
+
+  changeArticles
 
   render () {
     return (
