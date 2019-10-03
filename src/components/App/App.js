@@ -27,7 +27,7 @@ class App extends Component {
         <SearchForm />
         <main>
           <Menu />
-          <NewsContainer />
+          <NewsContainer newsArticles={this.state}/>
         </main>
       </div>
     );

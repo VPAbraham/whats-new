@@ -3,15 +3,11 @@ import './NewsArticle.css';
 
 const NewsArticle = (props) => {
   return (
-    <div>
-      <img alt="news article header"/>
-      <h3>Article Title</h3>
-      <p>Article Desc</p>
-      <section>
-        <a href="">
-          <p>Link To article</p>
-        </a>
-      </section>
+    <div className="NewsArticle">
+      <img className="NewsArticle-img" src={props.img} alt="news article header"/>
+      <h3 className="NewsArticle-headline">{props.headline}</h3>
+      <p className="NewsArticle-description">{props.description}</p>
+      <a className="NewsArticle-link"href={props.url}>Click for Link</a>
     </div>
   )
 }

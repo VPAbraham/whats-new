@@ -1,22 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './NewsContainer.css';
 import NewsArticle from '../NewsArticle/NewsArticle'
 
-class NewsContainer extends Component{
-  constructor() {
-    super()
-    this.state = {}
-  }
+const NewsContainer = (props) => {
+  console.log(props)
+  return (
+    <section>  
+    {props.newsArticles.local.map(newsArticle => {
+      return <NewsArticle
+      key={newsArticle.id} 
+      headline={newsArticle.headline} 
+      description={newsArticle.description} 
+      img={newsArticle.img} 
+      link={newsArticle.url} 
+      />
+      })
+    }
+    </section>
 
-  render() {
-    return (
-      <div className="news-container">
-        <NewsArticle />
-      </div>
-    )
-  }
+  )
 }
-
-// NEWSCONTAINER COMPONENT CODE GOES HERE
 
 export default NewsContainer;
