@@ -4,11 +4,11 @@ import './NewsArticle.css';
 const NewsArticle = (props) => {
   return (
     <div>
-      <img/>
+      <img alt="news article header"/>
       <h3>Article Title</h3>
       <p>Article Desc</p>
       <section>
-        <a>
+        <a href="">
           <p>Link To article</p>
         </a>
       </section>

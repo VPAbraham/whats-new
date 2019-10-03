@@ -16,23 +16,23 @@ class Menu extends Component{
     return (
       <nav className="nav">
         <div className="nav--local nav-div">
-          <img src={NewsIcon} className="icon"></img>
+          <img src={NewsIcon} className="icon" alt="news icon"></img>
           <p>Local News</p>
         </div>
         <div className="nav--technology nav-div">
-          <img src={TechIcon} className="icon"></img>
+          <img src={TechIcon} className="icon" alt="technology icon"></img>
           <p>Technology</p>
         </div>
         <div className="nav--entertainment nav-div">
-          <img src={EntIcon} className="icon"></img>
+          <img src={EntIcon} className="icon" alt="entertainment icon"></img>
           <p>Entertainment</p>
         </div>
         <div className="nav--science nav-div">
-          <img src={SciIcon} className="icon"></img>
+          <img src={SciIcon} className="icon" alt="science icon"></img>
           <p>Science</p>
         </div>
         <div className="nav--health nav-div">
-          <img src={HealthIcon} className="icon"></img>
+          <img src={HealthIcon} className="icon" alt="health icon"></img>
           <p>Health</p>
         </div>
       </nav>

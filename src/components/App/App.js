@@ -1,31 +1,34 @@
-import React, { Component } from 'react';
-import local from '../../data/local';
-import './App.css';
-import NewsArticle from '../NewsArticle/NewsArticle'
+import React, { Component } from 'react'
+import './App.css'
 import NewsContainer from '../NewsContainer/NewsContainer'
 import SearchForm from '../SearchForm/SearchForm'
-import Menu from "../Menu/Menu"
+import Menu from '../Menu/Menu'
+import local from '../../data/local'
+import technology from '../../data/technology'
+import entertainment from '../../data/entertainment'
+import science from '../../data/science'
+import health from '../../data/health'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       local,
-      // localNews,
-      // technology,
-      // entertainment,
-      // science,
-      // health
+      technology,
+      entertainment,
+      science,
+      health
     }
   }
-
-  changeArticles
 
   render () {
     return (
       <div className="app">
         <SearchForm />
-        <Menu />
+        <main>
+          <Menu />
+          <NewsContainer />
+        </main>
       </div>
     );
   }
