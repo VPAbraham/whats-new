@@ -6,35 +6,38 @@ import EntIcon from './menu-images/video-camera.png'
 import SciIcon from './menu-images/laboratory.png'
 import HealthIcon from './menu-images/care.png'
 
+const icons = {
+  'local': NewsIcon,
+  'technology': TechIcon,
+  'entertainment': EntIcon,
+  'science': SciIcon,
+  'health': HealthIcon
+}
+
+const MenuItem = (props) => {
+  const { topic, changeTopic } = props
+  return (
+    <div onClick={() => changeTopic(topic)}>
+      <img src={icons[topic]}/>
+      <p>{topic}</p>
+    </div>
+  )
+}
 
 class Menu extends Component{
-  constructor() {
+  constructor(props) {
     super()
   }
-
+  
   render() {
+    console.log(this.props.topics)
+    let mappedMenuItems = Object.keys(this.props.topics).map(topic => {
+      return <MenuItem topic={topic} changeTopic={this.props.changeTopic}/>
+    })
+    
     return (
       <nav className="nav">
-        <div className="nav--local nav-div">
-          <img src={NewsIcon} className="icon" alt="news icon"></img>
-          <p>Local News</p>
-        </div>
-        <div className="nav--technology nav-div">
-          <img src={TechIcon} className="icon" alt="technology icon"></img>
-          <p>Technology</p>
-        </div>
-        <div className="nav--entertainment nav-div">
-          <img src={EntIcon} className="icon" alt="entertainment icon"></img>
-          <p>Entertainment</p>
-        </div>
-        <div className="nav--science nav-div">
-          <img src={SciIcon} className="icon" alt="science icon"></img>
-          <p>Science</p>
-        </div>
-        <div className="nav--health nav-div">
-          <img src={HealthIcon} className="icon" alt="health icon"></img>
-          <p>Health</p>
-        </div>
+        {mappedMenuItems}
       </nav>
     )
   }

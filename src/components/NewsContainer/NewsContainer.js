@@ -3,10 +3,9 @@ import './NewsContainer.css';
 import NewsArticle from '../NewsArticle/NewsArticle'
 
 const NewsContainer = (props) => {
-  console.log(props)
   return (
     <section className="NewsContainer">  
-      {props.newsArticles.local.map(newsArticle => {
+      {props.newsArticles.map(newsArticle => {
         return <NewsArticle
         key={newsArticle.id} 
         headline={newsArticle.headline} 

@@ -13,25 +13,34 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      local,
-      technology,
-      entertainment,
-      science,
-      health
+      currentTopic: 'local',
+      topics: {
+        local,
+        technology,
+        entertainment,
+        science,
+        health
+      }
     }
   }
 
+  changeTopic = (topic) => {
+    this.setState({currentTopic: topic})
+  }
+
   render () {
+    const { topics, currentTopic } = this.state
     return (
       <div className="app">
         <SearchForm />
         <main>
-          <Menu />
-          <NewsContainer newsArticles={this.state}/>
+          <Menu topics={topics} changeTopic={this.changeTopic}/>
+          <NewsContainer newsArticles={topics[currentTopic]}/>
         </main>
       </div>
     );
   }
 }
+
 
 export default App;
