@@ -4,7 +4,7 @@ import './SearchForm.css'
 class SearchForm extends Component{
   constructor() {
     super()
-    this.state = {search: ""}
+    this.state = {search: ''}
   }
 
   handleChange = (event) => {
