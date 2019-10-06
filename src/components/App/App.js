@@ -30,11 +30,12 @@ class App extends Component {
 
   filterArticles = (search) => {
     const searchSubject = search.toUpperCase()
-    this.setState({
+    return({
       currentTopic: this.state.currentTopic.filter(article => 
         article.headline.toUpperCase().includes(search) ||
         article.description.toUpperCase().includes(search) )
     })
+
   }
 
   render () {
