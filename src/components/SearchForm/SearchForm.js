@@ -13,7 +13,6 @@ class SearchForm extends Component{
   }
 
   handleChange = (event) => {
-    console.log(event.target)
     this.setState({ search: event.target.value })
     event.preventDefault()
   }

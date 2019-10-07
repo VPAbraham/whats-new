@@ -1,18 +1,18 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import NewsContainer from './NewsContainer'
-import local from '../../data/local'
-import technology from '../../data/technology'
-import entertainment from '../../data/entertainment'
-import science from '../../data/science'
-import health from '../../data/health'
+import Local from '../../data/local'
+import Technology from '../../data/technology'
+import Entertainment from '../../data/entertainment'
+import Science from '../../data/science'
+import Health from '../../data/health'
 
 describe('NewsContainer', () => {
   let wrapper; 
   let appState;
   beforeEach(() => {
-    appState = { local, technology, entertainment, science, health }
-    wrapper = shallow(<NewsContainer newsArticles={appState} />)
+    appState = { Local, Technology, Entertainment, Science, Health }
+    wrapper = shallow(<NewsContainer newsArticles={appState.Local} topics={appState} />)
   })
   it('should match the snapshot with all data passed in correctly', () => {
 

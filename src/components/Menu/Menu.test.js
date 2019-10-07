@@ -27,15 +27,4 @@ describe('Menu', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
-
-  it('should change topic whenever a topic is clicked', () => {
-    const mockEvent = { target:
-                        {id: 0}
-    }
-
-    wrapper.find('.nav-div').simulate('click')
-    
-
-    expect(changeTopicMock).toHaveBeenCalledWith(mockEvent)
-  })
 })
