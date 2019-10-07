@@ -2,4 +2,5 @@
   width: 80%;
   column-count: 2;
   overflow-y: scroll;
+  display: flex;
 }
