@@ -17,8 +17,8 @@ const icons = {
 const MenuItem = (props) => {
   const { topic, changeTopic } = props
   return (
-    <div onClick={() => changeTopic(topic)}>
-      <img src={icons[topic]}/>
+    <div className="nav-div" onClick={() => changeTopic(topic)}>
+      <img className="icon" src={icons[topic]} alt="search icon"/>
       <p>{topic}</p>
     </div>
   )
@@ -30,9 +30,8 @@ class Menu extends Component{
   }
 
   render() {
-    console.log(this.props.topics)
     let mappedMenuItems = Object.keys(this.props.topics).map(topic => {
-      return <MenuItem topic={topic} changeTopic={this.props.changeTopic}/>
+      return <MenuItem className="nav-div" topic={topic} changeTopic={this.props.changeTopic}/>
     })
     
     return (

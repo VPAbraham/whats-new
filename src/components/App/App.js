@@ -45,7 +45,7 @@ class App extends Component {
         <SearchForm filterArticles={this.filterArticles}/>
         <main>
           <Menu topics={topics} changeTopic={this.changeTopic}/>
-          <NewsContainer newsArticles={topics[currentTopic]}/>
+          <NewsContainer newsArticles={topics[currentTopic]} topics={topics}/>
         </main>
       </div>
     );

@@ -5,6 +5,7 @@ import NewsArticle from '../NewsArticle/NewsArticle'
 const NewsContainer = (props) => {
   return (
     <section className="NewsContainer">  
+    {console.log(props)}
       {props.newsArticles.map(newsArticle => {
         return <NewsArticle
         key={newsArticle.id} 
