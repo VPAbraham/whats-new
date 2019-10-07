@@ -2,6 +2,7 @@
 
 Built using `create-react-app`, this project utilizes React to filter dynamically through news articles by topic and based on search results. Learning goals for this project included gaining a stronger grasp on React and TDD in React.
 
+[Link to Project](https://vpabraham.github.io/whats-new/)
 ### Set Up
 
 1. clone repo
