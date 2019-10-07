@@ -1,6 +1,6 @@
 .NewsContainer {
-  width: 80%;
   column-count: 2;
-  overflow-y: scroll;
   display: flex;
+  overflow-y: scroll;
+  width: 80%;
 }
