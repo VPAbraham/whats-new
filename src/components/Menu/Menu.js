@@ -25,13 +25,13 @@ const MenuItem = (props) => {
 }
 
 class Menu extends Component{
-  constructor(props) {
+  constructor() {
     super()
   }
 
   render() {
-    let mappedMenuItems = Object.keys(this.props.topics).map(topic => {
-      return <MenuItem className="nav-div" topic={topic} changeTopic={this.props.changeTopic}/>
+    let mappedMenuItems = Object.keys(this.props.topics).map((topic, index) => {
+      return <MenuItem key={index} className="nav-div" topic={topic} changeTopic={this.props.changeTopic}/>
     })
     
     return (

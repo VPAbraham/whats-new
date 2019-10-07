@@ -7,27 +7,28 @@ class SearchForm extends Component{
     this.state = {search: ''}
   }
 
-  submitSearch = (event) => {
-    this.setState({ search: event.target.value })
-    this.props.filterArticles(event.target.value)
+  submitSearch = () => {
+    this.props.filterArticles(this.state.search)
   }
 
-  preventReload = (event) => {
+  handleChange = (event) => {
+    this.setState({ search: event.target.value })
     event.preventDefault()
   }
 
   render() {
     return (
       <header className="SearchForm">
+        {console.log(this.props)}
         <h1 className="header--h1">What's 
-          <span className="header--span">New?</span>
+          <span className="header--span"> New?</span>
         </h1>
         <input 
           className="header--input" 
           placeholder="Search for news article here."
           name="search"
           value={this.state.search}
-          onChange={event => this.preventReload(event)}>
+          onChange={event => this.handleChange(event)}>
         </input>
         <button 
           className="header--button"

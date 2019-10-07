@@ -20,20 +20,25 @@ class App extends Component {
         Entertainment,
         Science,
         Health
-      }
+      },
+      searchedArticles: Local
     }
   }
 
   changeTopic = (topic) => {
-    this.setState({currentTopic: topic})
+    this.setState({
+      currentTopic: topic,
+      searchedArticles: this.state.topics[topic]
+    })
   }
 
   filterArticles = (search) => {
     const searchSubject = search.toUpperCase()
-    return({
-      currentTopic: this.state.currentTopic.filter(article => 
-        article.headline.toUpperCase().includes(search) ||
-        article.description.toUpperCase().includes(search) )
+    console.log(this.state.topics[this.state.currentTopic])
+    this.setState({
+      searchedArticles: this.state.topics[this.state.currentTopic].filter(article => 
+        article.headline.toUpperCase().includes(searchSubject) ||
+        article.description.toUpperCase().includes(searchSubject) )
     })
 
   }
@@ -45,7 +50,7 @@ class App extends Component {
         <SearchForm filterArticles={this.filterArticles}/>
         <main>
           <Menu topics={topics} changeTopic={this.changeTopic}/>
-          <NewsContainer newsArticles={topics[currentTopic]} topics={topics}/>
+          <NewsContainer newsArticles={this.state.searchedArticles} topics={topics}/>
         </main>
       </div>
     );
