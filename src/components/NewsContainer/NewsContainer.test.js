@@ -18,4 +18,4 @@ describe('NewsContainer', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
-})
+})w
