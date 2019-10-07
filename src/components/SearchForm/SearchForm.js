@@ -13,6 +13,7 @@ class SearchForm extends Component{
   }
 
   handleChange = (event) => {
+    console.log(event.target)
     this.setState({ search: event.target.value })
     event.preventDefault()
   }
@@ -20,7 +21,6 @@ class SearchForm extends Component{
   render() {
     return (
       <header className="SearchForm">
-        {console.log(this.props)}
         <h1 className="header--h1">What's 
           <span className="header--span"> New?</span>
         </h1>

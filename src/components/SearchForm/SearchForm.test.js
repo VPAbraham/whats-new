@@ -13,4 +13,15 @@ describe('SearchForm', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should be able to handle new text values', () => {
+    const mockEvent = {target: { value: 'hello'}}
+    wrapper.instance().handleChange = jest.fn()
+    expect(wrapper.state('search')).toEqual('')
+    wrapper.instance().handleChange(mockEvent)
+    expect(wrapper.state('search')).toEqual('hello')
+
+  })
+
+
 })

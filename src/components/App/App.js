@@ -33,7 +33,6 @@ class App extends Component {
 
   filterArticles = (search) => {
     const searchSubject = search.toUpperCase()
-    console.log(this.state.topics)
     this.setState({
       searchedArticles: this.state.topics[this.state.currentTopic].filter(article => 
         article.headline.toUpperCase().includes(searchSubject) ||
@@ -43,7 +42,7 @@ class App extends Component {
   }
 
   render () {
-    const { topics, currentTopic } = this.state
+    const { topics } = this.state
     return (
       <div className="app">
         <SearchForm filterArticles={this.filterArticles}/>

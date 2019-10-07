@@ -9,7 +9,7 @@ import Health from '../../data/health'
 
 describe('Menu', () => {
   let wrapper
-  let mockChangeTopic = jest.fn()
+  const changeTopicMock = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(<Menu 
@@ -20,11 +20,22 @@ describe('Menu', () => {
       Science,
       Health
     }
-    changeTopic = {mockChangeTopic}
+    changeTopic = {changeTopicMock}
     />)
   })
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should change topic whenever a topic is clicked', () => {
+    const mockEvent = { target:
+                        {id: 0}
+    }
+
+    wrapper.find('.nav-div').simulate('click')
+    
+
+    expect(changeTopicMock).toHaveBeenCalledWith(mockEvent)
   })
 })
