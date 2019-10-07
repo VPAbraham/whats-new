@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should match the snapshot 1`] = `
+<nav
+  className="nav"
+>
+  <MenuItem
+    changeTopic={[MockFunction]}
+    className="nav-div"
+    key="0"
+    topic="0"
+  />
+  <MenuItem
+    changeTopic={[MockFunction]}
+    className="nav-div"
+    key="1"
+    topic="1"
+  />
+  <MenuItem
+    changeTopic={[MockFunction]}
+    className="nav-div"
+    key="2"
+    topic="2"
+  />
+  <MenuItem
+    changeTopic={[MockFunction]}
+    className="nav-div"
+    key="3"
+    topic="3"
+  />
+  <MenuItem
+    changeTopic={[MockFunction]}
+    className="nav-div"
+    key="4"
+    topic="4"
+  />
+  <MenuItem
+    changeTopic={[MockFunction]}
+    className="nav-div"
+    key="5"
+    topic="5"
+  />
+  <MenuItem
+    changeTopic={[MockFunction]}
+    className="nav-div"
+    key="6"
+    topic="6"
+  />
+  <MenuItem
+    changeTopic={[MockFunction]}
+    className="nav-div"
+    key="7"
+    topic="7"
+  />
+</nav>
+`;

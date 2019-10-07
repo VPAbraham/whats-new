@@ -21,10 +21,9 @@ class App extends Component {
         Science,
         Health
       },
-      searchedArticles: Local
+      searchedArticles: Local,
     }
   }
-
   changeTopic = (topic) => {
     this.setState({
       currentTopic: topic,
@@ -34,7 +33,7 @@ class App extends Component {
 
   filterArticles = (search) => {
     const searchSubject = search.toUpperCase()
-    console.log(this.state.topics[this.state.currentTopic])
+    console.log(this.state.topics)
     this.setState({
       searchedArticles: this.state.topics[this.state.currentTopic].filter(article => 
         article.headline.toUpperCase().includes(searchSubject) ||

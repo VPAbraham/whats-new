@@ -15,9 +15,7 @@ describe('NewsArticle', () => {
   link: "www.Victor.com"
   }
 
-  wrapper = shallow(<NewsArticle 
-  articleProps = {articleProps}
-  />)
+  wrapper = shallow(<NewsArticle articleProps = {articleProps} />)
   })
   it('should match the snapshot with all data passed in correctly', () => {
     expect(wrapper).toMatchSnapshot()
