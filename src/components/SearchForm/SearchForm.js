@@ -9,6 +9,7 @@ class SearchForm extends Component{
 
   submitSearch = () => {
     this.props.filterArticles(this.state.search)
+    this.setState({ search: '' }) 
   }
 
   handleChange = (event) => {
